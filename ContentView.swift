@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    // 
+    // MARK: - State for toggling colors
+    @State private var isBlueColor = false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            // Background Color that taggles between blue and yellow
+            Color(isBlueColor ? .blue : .yellow)
+                .ignoresSafeArea()
         }
-        .padding()
     }
 }
 
