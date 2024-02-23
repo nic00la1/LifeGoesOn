@@ -19,6 +19,8 @@ struct ContentView: View {
                     isBlueColor.toggle()
                 }
                 .ignoresSafeArea()
+            AnimationSequenceView()
+                .offset(x: 12, y: 180)
         }
     }
 }
