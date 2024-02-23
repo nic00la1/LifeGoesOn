@@ -14,6 +14,10 @@ struct ContentView: View {
         ZStack {
             // Background Color that taggles between blue and yellow
             Color(isBlueColor ? .blue : .yellow)
+                .animation(Animation.easeInOut(duration: 3.5).repeatForever(autoreverses: false), value: isBlueColor)
+                .onAppear {
+                    isBlueColor.toggle()
+                }
                 .ignoresSafeArea()
         }
     }
