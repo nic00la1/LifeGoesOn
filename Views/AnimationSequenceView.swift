@@ -6,8 +6,9 @@
 //
 
 import SwiftUI
-
-var images: [UIImage]! = [
+// MARK: - MANY LINES
+/*var images: [UIImage]! = [
+    
     UIImage(named: "image0")!,
     UIImage(named: "image1")!,
     UIImage(named: "image2")!,
@@ -23,7 +24,14 @@ var images: [UIImage]! = [
     UIImage(named: "image12")!,
     UIImage(named: "image13")!,
     UIImage(named: "image14")!
-]
+    
+]*/
+
+// MARK: - REFACTORED :)
+let images: [UIImage] = (0...14).compactMap {
+    UIImage(named: "image\($0)")
+}
+
 
 let animatedImages = UIImage.animatedImage(with: images, duration: 0.5)
 
